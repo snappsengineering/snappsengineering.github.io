@@ -1,0 +1,92 @@
+:root {
+  --bg: #0b1220;
+  --card: #111b2f;
+  --text: #e6edf7;
+  --muted: #9db0cf;
+  --accent: #5cc8ff;
+  --accent-2: #8ef6cf;
+  --border: #233251;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% -10%, #1b2a49 0%, var(--bg) 50%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+p,
+li {
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid > .card {
+  margin: 0;
+}
+
+.card {
+  background: color-mix(in srgb, var(--card) 85%, black);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 14px 0;
+}
+
+.footer {
+  margin-top: 36px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
